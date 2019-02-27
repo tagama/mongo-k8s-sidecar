@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: mongo-node-1
-          image: mongo
+          image: mongo:4-xenial
           command:
             - mongod
             - "--replSet"
@@ -35,7 +35,7 @@ spec:
             - "--noprealloc"
           ports:
             - containerPort: 27017
-              hostPort: 4000
+              protocol: TCP
           volumeMounts:
             - name: mongo-persistent-storage
               mountPath: /data/db
@@ -51,4 +51,4 @@ spec:
       labels:
         name: mongo-node-1
         role: mongo
-        environment: test
+        environment: devmgpe
