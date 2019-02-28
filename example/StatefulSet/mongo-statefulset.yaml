@@ -73,10 +73,10 @@ spec:
               value: "role=extrajudicial-mongo,environment=devmgpe"
             - name: KUBE_NAMESPACE
               value: "devmgpe"
-            - name: MONGODB_USERNAME
-              value: "MGPE_EXJ"
-            - name: MONGODB_PASSWORD
-              value: "MGPE_EXJ_DES"
+#            - name: MONGODB_USERNAME
+#              value: "MGPE_EXJ"
+#            - name: MONGODB_PASSWORD
+#              value: "MGPE_EXJ_DES"
   volumeClaimTemplates:
   - metadata:
       name: mongo-persistent-storage
